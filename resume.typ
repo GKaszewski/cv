@@ -23,9 +23,35 @@
 = Experience
 
 #resume-entry(
+  title: "Python Developer",
+  location: "Remote | Warsaw, PL",
+  date: "2025 - Present",
+  description: "choreograph",
+)
+
+#resume-item[
+  I am responsible for developing and maintaing company's internal tools and applications.
+
+  (Python, FastAPI, Django, PostgreSQL, GCP, Azure, Docker, Kubernetes, Gitlab Pipelines)
+]
+
+#resume-entry(
   title: "Frontend Developer",
   location: "Remote | Warsaw, PL",
-  date: "2023 - Present",
+  date: "2024 - 2025",
+  description: "choreograph",
+)
+
+#resume-item[
+  I am responsible for developing and maintaing company's internal tools and applications.
+
+  (Typescript, Angular, SCSS, Azure, GCP, Nginx, Docker, Kubernetes, Gitlab Pipelines)
+]
+
+#resume-entry(
+  title: "Frontend Developer",
+  location: "Remote | Warsaw, PL",
+  date: "2023 - 2024",
   description: "Wavemaker",
 )
 
@@ -73,35 +99,6 @@
   I was responsible for porting Car Trader Simulator to mobile platforms.
 ]
 
-= Projects
-
-#resume-entry(
-  title: "My website",
-  location: [#github-link("GKaszewski/gabrielkaszewski_rs")],
-)
-
-#resume-item[
-  My personal website built with Rust and loco.rs.
-  I went with Rust because I was running out of memory on my VPS and my older website was using Django which was using a lot of memory.
-
-  Main features:
-  - Home page with my resume and contact information.
-  - Projects page with my projects.
-  - Data storage (my mini cloud storage).
-
-  (Rust, loco.rs, Docker)
-]
-
-#resume-entry(
-  title: "FleetCompass",
-  location: [#link("https://fleetcompass.pl")],
-)
-
-#resume-item[
-  SaaS for managing the fleet of vehicles.
-  
-  It is a full stack application, backend is using Django, the web app is in React and mobile app is powered by Capacitor.
-]
 
 = Skills
 
