@@ -1,4 +1,4 @@
-#import "@preview/modern-cv:0.7.0": *
+#import "@preview/modern-cv:0.9.0": *
 
 #show: resume.with(
   author: (
@@ -9,8 +9,8 @@
     github: "GKaszewski",
     linkedin: "gabriel-kaszewski-5344b3183",
     positions: (
-      "Full Stack Developer",
-      "Software Developer",
+      "Software Engineer",
+      "Systems & Infrastructure",
     ),
   ),
   date: datetime.today().display(),
@@ -18,106 +18,79 @@
   colored-headers: false,
   show-footer: false,
   accent-color: "#020101",
+  profile-picture: none,
 )
+
+= Summary
+
+#text("High-performance systems engineer with 5 years of experience in distributed architectures, data orchestration, and cloud-agnostic design. Co-author of peer-reviewed research in the Nature Portfolio. Specializing in Rust, strict-typed Python, and the optimization of legacy computational workflows.", size: 9pt)
 
 = Experience
 
 #resume-entry(
-  title: "Python Developer",
+  title: "Software Engineer",
   location: "Remote | Warsaw, PL",
-  date: "2025 - Present",
-  description: "choreograph",
+  date: "Sep 2023 - Present",
+  description: "WPP (WPP Media / Choreograph / Wavemaker)",
 )
 
 #resume-item[
-  I am responsible for developing and maintaing company's internal tools and applications.
+  _Advanced from frontend UI development to backend systems engineering, leading infrastructure-agnostic design initiatives._
 
-  (Python, FastAPI, Django, PostgreSQL, GCP, Azure, Docker, Kubernetes, Gitlab Pipelines)
+  *Backend & Infrastructure* (Mar 2025 - Present)
+  - Engineered and optimized backend applications and internal tools using Python, FastAPI, and Django.
+  - Streamlined CI/CD workflows and containerized applications with GitLab Pipelines, Docker, and Kubernetes across GCP and Azure environments.
+
+  *Frontend Architecture* (Sep 2023 - Mar 2025)
+  - Architected scalable microfrontends utilizing Angular and Module Federation, seamlessly integrating standalone internal tools into a unified enterprise shell application.
+  - Ensured seamless integration of UI components with Kubernetes-based deployments and Azure Pipelines.
 ]
 
 #resume-entry(
-  title: "Frontend Developer",
+  title: "Freelance Software Engineer",
   location: "Remote | Warsaw, PL",
-  date: "2024 - 2025",
-  description: "choreograph",
+  date: "Feb 2023 - Sep 2023",
+  description: "Independent Consultant",
 )
 
 #resume-item[
-  I was responsible for developing and maintaing company's internal tools and applications.
-
-  (Typescript, Angular, SCSS, Azure, GCP, Nginx, Docker, Kubernetes, Gitlab Pipelines)
+  - Engineered "Fleet Compass," a comprehensive SaaS solution for modern fleet management, building the backend with Python, Django, and PostgreSQL, alongside a React frontend.
+  - Developed "Poczuj - Szkoła z Lasu," an interactive music composition web application tailored for children, utilizing React.
+  - Configured web servers and reverse proxies using Nginx to ensure secure and efficient application delivery.
 ]
 
 #resume-entry(
-  title: "Frontend Developer",
-  location: "Remote | Warsaw, PL",
-  date: "2023 - 2024",
-  description: "Wavemaker",
-)
-
-#resume-item[
-  I was responsible for developing and maintaing company's internal tools and applications.
-
-  (Typescript, React, Angular, TailwindCSS, SCSS, Azure, GCP, Nginx, Docker, Kubernetes, Gitlab Pipelines)
-]
-
-#resume-entry(
-  title: "Full Stack Developer",
+  title: "Software Engineer",
   location: "Remote",
-  date: "2021 - 2023",
+  date: "May 2021 - Feb 2023",
   description: "GIAP Sp. z o.o.",
 )
 
 #resume-item[
-  My main responsibility was to develop and maintain module for assertion of the correctness of the GIS data and its complainace with the standards.
-
-  (Python, Qt, PostGIS, PostgreSQL)
-
-  From 2022 I mainly worked on the development of the web application for the City of Gdańsk. (#link("https://geogdansk.pl"))
-
-  (Typescript, React, ArcGIS JS API)
+  - Architected and optimized complex PostGIS/PostgreSQL cross-database comparison queries utilizing Common Table Expressions (CTEs), drastically reducing execution time from over 5 minutes to under 15 seconds.
+  - Developed a robust GIS data assertion module using Python and Qt to automatically validate spatial data against strict compliance standards.
+  - Engineered a comprehensive, public-facing web application for the City of Gdańsk (#link("https://geogdansk.pl")) leveraging React, TypeScript, Redux, and the ArcGIS JS API.
 ]
-
-#resume-entry(
-  title: "Full Stack Developer",
-  location: "Remote",
-  date: "2021 - Present",
-  description: "digimonkeys.com",
-)
-
-#resume-item[ ]
-
-#resume-entry(
-  title: "Unity Developer",
-  location: "Remote",
-  date: "2019 - 2020",
-  description: "Mobil Titans",
-)
-
-#resume-item[
-  I was responsible for porting Car Trader Simulator to mobile platforms.
-]
-
 
 = Skills
 
 #resume-skill-item(
   "Programming Languages",
-  (strong("Python"), strong("Typescript"), "Javascript", "C#", "C++", "Rust"),
+  (strong("Rust"),strong("Python"), strong("Typescript"), "C#", "C++"),
 )
 #resume-skill-item(
-  "Frameworks",
-  (strong("React"), strong("Django"), "Angular", "FastAPI", "Qt", "TailwindCSS"),
+  "Frameworks & Libraries",
+  (strong("React"), strong("Django"), strong("FastAPI"), "Angular", "Qt", "TailwindCSS"),
 )
 #resume-skill-item(
-  "Database",
+  "Cloud & DevOps",
+  (strong("Docker"), strong("Kubernetes"), "Azure", "GCP", "GitLab CI", "Nginx"),
+)
+#resume-skill-item(
+  "Databases",
   (strong("PostgreSQL"), "PostGIS"),
 )
-#resume-skill-item(
-  "Other",
-  (strong("Docker"), "Kubernetes", "Azure", "GCP", "Nginx", "Git", "Microsoft Visual Studio"),
-)
-#resume-skill-item("Languages", ("Polish (native)", "English (C1)"))
+#resume-skill-item("Languages", ("Polish (Native)", "English (C1)"))
 
 = Education
 
@@ -128,12 +101,17 @@
   description: "B.S. in Bioinformatics",
 )
 
+#resume-item[
+  - *Thesis:* "Modeling evolutionary processes using cellular automata"
+  - *Publication:* Co-authored a scientific article (#link("http://dx.doi.org/10.1038/s41598-023-44488-7")[DOI: 10.1038/s41598-023-44488-7]).
+]
+
 #box(height: 20pt)
 
 #text(
   style: "italic",
   weight: "light",
-  size: 8pt,
+  size: 6pt,
 )[
   I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal
   of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons
