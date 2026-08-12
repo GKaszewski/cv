@@ -23,7 +23,7 @@
 
 = Summary
 
-#text("Systems engineer with 5 years of professional experience. Co-founder of jestzlecenie.pl (registered LLC). Co-author of peer-reviewed research in Nature. Ships production systems in Rust and Python — from federated social platforms with hexagonal/DDD architecture to enterprise microfrontend shells. Self-hosts all projects on own Proxmox/Docker/Traefik infrastructure managed via Ansible.", size: 9pt)
+#text("Systems engineer with 5 years of professional experience. Co-founder of jestzlecenie.pl (registered LLC). Co-author of peer-reviewed research in Nature. Ships production systems in Rust and Python from federated social platforms with hexagonal/DDD architecture to enterprise microfrontend shells. Self-hosts all projects on own Proxmox/Docker/Traefik infrastructure managed via Ansible.", size: 9pt)
 
 = Experience
 
@@ -60,18 +60,18 @@
 #resume-entry(
   title: "Movies Diary",
   location: link("https://movies.gabrielkaszewski.dev"),
-  date: "2025",
+  date: "2026",
   description: "Self-hosted federated movie diary — Rust",
 )
 
 #resume-item[
-  - Hexagonal architecture (DDD), 35 crates — swappable adapters for SQLite/PostgreSQL, filesystem/S3, in-process/NATS event bus. ActivityPub federation (reviews appear on Mastodon), Jellyfin/Plex webhooks, full-text search, TUI, React SPA, OpenAPI docs.
+  - Hexagonal architecture (DDD), 35 crates — swappable adapters for SQLite/PostgreSQL, filesystem/S3, in-process/NATS event bus. ActivityPub federation (reviews appear on Mastodon), Jellyfin/Plex webhooks, full-text search, React SPA, OpenAPI docs.
 ]
 
 #resume-entry(
   title: "Thoughts",
   location: "",
-  date: "2024 - Present",
+  date: "2025 - Present",
   description: "Federated microblogging server — Rust, Next.js frontend",
 )
 
