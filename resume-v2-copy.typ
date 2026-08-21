@@ -70,7 +70,7 @@
 
 #resume-entry(
   title: "Thoughts",
-  location: "https://thoughts.gabrielkaszewski.dev/",
+  location: "",
   date: "2025 - Present",
   description: "Federated microblogging server — Rust, Next.js frontend",
 )
