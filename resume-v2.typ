@@ -23,7 +23,7 @@
 
 = Summary
 
-#text("Systems engineer with 5 years of professional experience. Co-founder of jestzlecenie.pl (registered LLC). Co-author of peer-reviewed research in Nature. Ships production systems in Rust and Python from federated social platforms with hexagonal/DDD architecture to enterprise microfrontend shells. Self-hosts all projects on own Proxmox/Docker/Traefik infrastructure managed via Ansible.", size: 9pt)
+#text("Systems engineer with 5 years of professional experience. Co-founder of jestzlecenie.pl (registered LLC). Co-author of peer-reviewed research in Nature Portfolio. Ships production systems in Rust and Python from federated social platforms with hexagonal/DDD architecture to enterprise microfrontend shells. Self-hosts all projects on own Proxmox/Docker/Traefik infrastructure managed via Ansible.", size: 9pt)
 
 = Experience
 
@@ -35,7 +35,7 @@
 )
 
 #resume-item[
-  - Co-founded a job marketplace — built the backend: Django, PostgreSQL with trigram search, Celery async tasks, real-time messaging, KNN-based recommendations, moderation, notifications.
+  - Co-founded a local-jobs marketplace, live with 750+ users. Lead the backend — Django/DRF on PostgreSQL + PostGIS (radius and map-viewport geospatial search, trigram full-text, KNN recommendations), Celery/Redis, real-time messaging, moderation, notifications — and own infrastructure and deployments end to end: Docker behind Traefik, GitHub Actions CI/CD, Prometheus/Grafana. Two years in production, no ops team.
 ]
 
 #resume-entry(
@@ -65,7 +65,7 @@
 )
 
 #resume-item[
-  - Hexagonal architecture (DDD), 35 crates — swappable adapters for SQLite/PostgreSQL, filesystem/S3, in-process/NATS event bus. ActivityPub federation (reviews appear on Mastodon), Jellyfin/Plex webhooks, full-text search, React SPA, OpenAPI docs.
+  - Hexagonal architecture (DDD), 37 crates — swappable adapters for SQLite/PostgreSQL, filesystem/S3, in-process/NATS event bus. ActivityPub federation (reviews appear on Mastodon), Jellyfin/Plex webhooks, full-text search, React SPA, OpenAPI docs.
 ]
 
 #resume-entry(
@@ -76,7 +76,7 @@
 )
 
 #resume-item[
-  - Full ActivityPub implementation with NATS JetStream fan-out. Same hexagonal architecture; reuses k-ap, a shared ActivityPub library extracted and published across both projects.
+  - Full ActivityPub implementation with NATS JetStream fan-out to a separate worker. Built on k-ap — a reusable AP protocol layer I extracted once both projects needed the same plumbing, now at v0.5.0 across 13 tagged releases.
 ]
 
 = Skills
@@ -91,7 +91,7 @@
 )
 #resume-skill-item(
   "Data & Messaging",
-  (strong("PostgreSQL"), "SQLite", "PostGIS", "NATS JetStream", "S3"),
+  (strong("PostgreSQL"), "SQLite", "PostGIS", "Redis", "NATS JetStream", "S3"),
 )
 #resume-skill-item(
   "Frontend",
@@ -99,7 +99,7 @@
 )
 #resume-skill-item(
   "Platforms",
-  ("GCP", "Azure", "GitLab CI"),
+  ("GCP", "Azure", "GitHub Actions", "GitLab CI"),
 )
 #resume-skill-item("Spoken", ("Polish (Native)", "English (C1)"))
 
