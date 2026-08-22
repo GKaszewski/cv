@@ -23,7 +23,7 @@
 
 = Summary
 
-#text("Systems engineer with 5 years of professional experience. Co-founder of jestzlecenie.pl (registered LLC). Co-author of peer-reviewed research in Nature Portfolio. Ships production systems in Rust and Python from federated social platforms with hexagonal/DDD architecture to enterprise microfrontend shells. Self-hosts all projects on own Proxmox/Docker/Traefik infrastructure managed via Ansible.", size: 9pt)
+#text("Systems engineer with 5 years of professional experience. Co-founder of jestzlecenie.pl (registered LLC). Co-author of peer-reviewed research in Nature Portfolio. Ships production systems in Rust and Python, from GenAI services to federated social platforms. Self-hosts everything on own Proxmox/Docker/Traefik stack, managed via Ansible.", size: 9pt)
 
 = Experience
 
@@ -47,36 +47,27 @@
 
 #resume-item[
   *WPP — Backend & Infrastructure* (Sep 2023 - Present)
-  - Designed and shipped backend services and internal tools in Python (FastAPI, Django), deployed to Kubernetes across GCP and Azure.
-  - Architected microfrontend platform using Angular and Module Federation, unifying standalone tools into a single enterprise shell.
+  - Backend owner of a GenAI audience-persona service (FastAPI, async SQLAlchemy/PostgreSQL, BigQuery, Vertex AI + Imagen): API, generation worker and Pub/Sub event-sync worker, on Kubernetes via Helm with Terraform-managed GCP infrastructure.
+  - Hardened async job lifecycle under production load — stale/abandoned job reclamation, bounded sweeper cycles, shorter DB transactions, pooled connections released before third-party calls. Authored a resilience audit of retry, jitter and timeout policy across five service clients.
+  - Maintain internal Python packages consumed by sibling services (audience-definition translation across survey waves and country-specific demographic rules), semver with changelogs.
+  - Architected an Angular + Module Federation microfrontend platform, unifying standalone tools into one enterprise shell.
 
   *GIAP — GIS Engineering* (May 2021 - Feb 2023)
-  - Optimized PostGIS/PostgreSQL cross-database queries using CTEs — reduced execution from 5+ minutes to under 15 seconds.
-  - Built a public GIS web application for the City of Gdańsk (#link("https://geogdansk.pl")) with React, TypeScript, and ArcGIS JS API.
+  - Optimized PostGIS/PostgreSQL cross-database queries using CTEs — cut execution from 5+ minutes to under 15 seconds. Built a public GIS web app for the City of Gdańsk (#link("https://geogdansk.pl")) with React, TypeScript and ArcGIS JS API.
 ]
 
 = Projects
 
 #resume-entry(
-  title: "Movies Diary",
-  location: link("https://movies.gabrielkaszewski.dev"),
-  date: "2026",
-  description: "Self-hosted federated movie diary — Rust",
-)
-
-#resume-item[
-  - Hexagonal architecture (DDD), 37 crates — swappable adapters for SQLite/PostgreSQL, filesystem/S3, in-process/NATS event bus. ActivityPub federation (reviews appear on Mastodon), Jellyfin/Plex webhooks, full-text search, React SPA, OpenAPI docs.
-]
-
-#resume-entry(
-  title: "Thoughts",
-  location: "https://thoughts.gabrielkaszewski.dev/",
+  title: "Movies Diary · Thoughts · k-ap",
+  location: link("https://gabrielkaszewski.dev"),
   date: "2025 - Present",
-  description: "Federated microblogging server — Rust, Next.js frontend",
+  description: "Self-hosted federated services — Rust",
 )
 
 #resume-item[
-  - Full ActivityPub implementation with NATS JetStream fan-out to a separate worker. Built on k-ap — a reusable AP protocol layer I extracted once both projects needed the same plumbing, now at v0.5.0 across 13 tagged releases.
+  - Two ActivityPub services (federated movie diary, microblogging server) interoperating with Mastodon. Hexagonal/DDD Rust workspaces — 37 crates, swappable SQLite/PostgreSQL, filesystem/S3 and in-process/NATS adapters, JetStream fan-out to separate workers, Jellyfin/Plex webhooks, React SPA.
+  - Extracted the shared protocol layer into k-ap: composable trait facades, idempotent inbound handling, SSRF-hardened fetching. v0.5.0, 13 tagged releases.
 ]
 
 = Skills
@@ -87,11 +78,11 @@
 )
 #resume-skill-item(
   "Backend & Infra",
-  (strong("Axum"), strong("FastAPI"), strong("Django"), "Celery", "Docker", "Kubernetes", "Ansible", "Proxmox", "Traefik"),
+  (strong("Axum"), strong("FastAPI"), strong("Django"), "Celery", "Docker", "Kubernetes", "Helm", "Terraform", "Ansible", "Proxmox", "Traefik"),
 )
 #resume-skill-item(
   "Data & Messaging",
-  (strong("PostgreSQL"), "SQLite", "PostGIS", "Redis", "NATS JetStream", "S3"),
+  (strong("PostgreSQL"), "BigQuery", "SQLite", "PostGIS", "Redis", "NATS JetStream", "Pub/Sub", "S3"),
 )
 #resume-skill-item(
   "Frontend",
@@ -113,8 +104,7 @@
 )
 
 #resume-item[
-  - *Thesis:* "Modeling evolutionary processes using cellular automata"
-  - *Publication:* Co-authored in Nature Scientific Reports (#link("http://dx.doi.org/10.1038/s41598-023-44488-7")[DOI]).
+  - *Thesis:* "Modeling evolutionary processes using cellular automata" · *Publication:* Nature Scientific Reports (#link("http://dx.doi.org/10.1038/s41598-023-44488-7")[DOI]).
 ]
 
 #text(
@@ -122,7 +112,5 @@
   weight: "light",
   size: 6pt,
 )[
-  I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal
-  of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons
-  with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).
+  I agree to the processing of my personal data for the purposes of this recruitment process, pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and Regulation (EU) 2016/679 (GDPR).
 ]
